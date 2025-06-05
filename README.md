@@ -1,13 +1,13 @@
-# integradorProgramacion25
+# Integrador Programacion I
 Repositorio publico para el trabajo integrador de Programación I
 
 'Acá estoy poniendo info que creo que es interesante, primero pongo la fuente y luego el texto que me interesa. La intención es despues poder volver a los textos y que sea mas simple la investigación' 
 
 ## Free Code Camp: 
-https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/
+[Free Code Camp Link] (https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/)
 
 ## 4Geeks: 
-https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python
+[4Geeks Link] (https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python)
 ```
 ## Búsqueda Lineal
 Los algoritmos de búsqueda lineal, también conocidos como búsqueda secuencial, implican recorrer una lista de elementos uno por uno hasta encontrar un elemento específico. Este algoritmo es muy sencillo de implementar en código pero puede ser muy ineficiente dependiendo del largo de la lista y la ubicación donde está el elemento. A continuación veremos un pequeño ejemplo de código en Python.
@@ -39,7 +39,7 @@ Mayor complejidad de implementación: Comparado con la búsqueda lineal, la bús
 ```
 -------------
 ## Datacamp Python:
-https://www.datacamp.com/es/tutorial/linear-search-python
+[Datacamp Python Link] (https://www.datacamp.com/es/tutorial/linear-search-python)
 ```
 La búsqueda lineal es un algoritmo que localiza un valor concreto dentro de una lista comprobando cada elemento uno a uno. Empieza por el primer elemento, lo compara con el objetivo y sigue moviéndose por la lista hasta que encuentra el objetivo o llega al final de la lista. Es un algoritmo sencillo e intuitivo.
 
