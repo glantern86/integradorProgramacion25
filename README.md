@@ -29,17 +29,15 @@ Sus desventajas son que requiere una lista ordenada y que acarrea una mayor comp
 # Resultados Obtenidos	
 # Conclusión Final	
 # Bibliografía
-[Algoritmos de Ordenamiento y Búsqueda en Python: Optimizando la Gestión de Datos. (2025, April 25). 4Geeks. https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python](https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python)
+Algoritmos de Ordenamiento y Búsqueda en Python: Optimizando la Gestión de Datos. (2025, April 25). 4Geeks. [https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python](https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python)
 
-[Krishna, A. (2024, August 14). Search algorithms – linear search and binary search code implementation and complexity analysis. freeCodeCamp.org. https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/](https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/)
+Krishna, A. (2024, August 14). Search algorithms – linear search and binary search code implementation and complexity analysis. freeCodeCamp.org. [https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/](https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/)
 
-[Datacamp Python Link](https://www.datacamp.com/es/tutorial/linear-search-python)
+TutorialsPoint. (2025, March 25). Searching algorithms. [https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm](https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm)
 
-[TutorialsPoint. (2025, March 25). Searching algorithms. https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm](https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm)
+TutorialsPoint. (2025a, March 25). Linear Search Algorithm. [https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm)
 
-[TutorialsPoint. (2025a, March 25). Linear Search Algorithm. https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm)
-
-[TutorialsPoint. (2025a, March 25). Binary search algorithm. https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
+TutorialsPoint. (2025a, March 25). Binary search algorithm. [https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
 
 # Anexos
 
