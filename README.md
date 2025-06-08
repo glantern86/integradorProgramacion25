@@ -140,23 +140,24 @@ Tiempo de ejecución: 0.01236 ms
 
 # Metodología Utilizada
 
-La metodología incluye una investigación exhaustiva en diversas fuentes. Luego procedí a generar algoritmos de prueba para verificar de forma empírica los tiempos de cómputo.  
-Como herramienta de trabajo estoy utilizando Visual Studio Code como IDE y GitHub como plataforma en la que voy a publicar mi trabajo.  
-Incluyo el módulo `time` para poder medir los tiempos de ejecución. También cuento con la asistencia de GitHub Copilot para corregir mis errores.
+La metodología incluye una investigación exhaustiva en diversas fuentes, presentes en la seccion de Bibliografía. Luego procedí a generar algoritmos de prueba para verificar de forma empírica los tiempos de cómputo.  
+Como herramienta de trabajo estoy utilizando Visual Studio Code como IDE, GitHub Copilot para ayudarme a corregir mi código y GitHub como plataforma en la que voy a publicar mi trabajo.  
+Incluyo el módulo `time` para poder medir los tiempos de ejecución y el método `sort` para ordernar mi lista.
 
 # Resultados Obtenidos
 
 A primera vista salta el hecho de la longitud del código. Mientras que nuestro algoritmo de búsqueda lineal tiene 23 líneas, el de búsqueda binaria tiene 32, un poco menos de un 40% más de código. Respecto de que la búsqueda lineal es más simple, no hay duda alguna.
 
-Respecto al tiempo de cómputo, estamos analizando primero un escenario que es beneficioso para la búsqueda binaria. Tomamos una serie de 50 elementos y el elemento que buscamos está por más de la mitad (en la posición 37 de 50). Mientras que la búsqueda lineal demora 0.01136 ms, la binaria demora 0.00659 ms, casi la mitad del tiempo.
+Respecto al tiempo de cómputo, estamos analizando primero un escenario que es beneficioso para la búsqueda binaria. Tomamos una serie de 50 elementos y el elemento que buscamos está por más de la mitad (en la posición 37 de 50). Mientras que la búsqueda lineal demora 0.01136 ms, la binaria demora 0.00659 ms casi la mitad del tiempo.
 
 En el segundo escenario analizamos un caso que es extremadamente provechoso para la búsqueda lineal. El elemento a buscar es el primero de la serie. Mientras que la búsqueda lineal demora 0.00633 ms, la binaria está tardando 0.01236 ms.
 
 
 # Conclusión Final
 
-La busqueda lineal y la busqueda binaria son elementos extremadamente básicos pero no dejan de ser utiles en ciertos contextos. Si estamos hablando de listas de pocos elementos desordenados la busqueda lineal es una buena opcion de implementar, sin embargo su rendimiento decrece de forma drástica a medida que los elementos de la lista van creciendo o el elemento en cuestion se encuentra al final. La búsqueda binaria demuestra ser mucho más eficiente en listas ordenadas, reduciendo el tiempo de búsqueda gracias a la estrategia de divide y conquistarás. No obstante, requiere que la lista esté ordenada previamente, lo cual puede agregar un costo computacional extra.
-Los resultados de mi investigación arrojan que la búsqueda lineal es una buena opción para volumenes pequeños de datos pero que la busqueda binaria es la más eficiente a medida que se van agregando elementos en la lista.
+La busqueda lineal y la busqueda binaria son elementos extremadamente básicos pero no dejan de ser utiles en ciertos contextos. Si estamos hablando de listas de pocos elementos desordenados la busqueda lineal es una buena opcion de implementar, sin embargo su rendimiento decrece de forma drástica a medida que los elementos de la lista van creciendo o el elemento en cuestion se encuentra al final de la lista. La búsqueda binaria demuestra ser mucho más eficiente en listas ordenadas, reduciendo el tiempo de búsqueda gracias a la estrategia de divide y conquistarás. No obstante, requiere que la lista esté ordenada previamente, lo cual puede implicar un costo computacional extra.
+
+Los resultados de mi investigación arrojan que la búsqueda lineal es una buena opción para volumenes pequeños de datos pero que la busqueda binaria es la más eficiente a medida que se van agregando elementos en la lista. Comparativamente hablando ambos algoritmos tienen sus fortalezas y debilidades, ninguno es ampliammente superior al otro ni ninguno deja al otro obsoleto sino que es el contexto el que prima en estas ocasiones. 
 	
 # Bibliografía
 Algoritmos de Ordenamiento y Búsqueda en Python: Optimizando la Gestión de Datos. (2025, April 25). 4Geeks. [https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python](https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python)
