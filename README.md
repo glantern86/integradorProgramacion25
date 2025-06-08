@@ -1,47 +1,49 @@
 # Integrador Programacion I
 Repositorio publico para el trabajo integrador de Programación I
 
-'Acá estoy poniendo info que creo que es interesante, primero pongo la fuente y luego el texto que me interesa. La intención es despues poder volver a los textos y que sea mas simple la investigación' 
+# Introducción
+Los algoritmos de busqueda son una serie de instrucciones detalladas para poder retirar o adquirir cierta informacion dentro de una estructura de datos. Los algoritmos de ordenamiento por otro lado son una serie de instrucciones para imponer orden dentro una serie, grupo o conjunto. La importancia de ambas es evidente dentro del marco de la era en la que vivimos: la era de la información.
 
-## Free Code Camp: 
-[Free Code Camp Link](https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/)
+Vivimos en un mundo en el que el acceso a la informacion no es un problema sino su calidad. Teniendo esto en cuesta la efectividad la hora de realizar busquedas y ordenar los resultados es de importancia capital.
 
-## 4Geeks: 
-[4Geeks Link](https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python)
-```
-## Búsqueda Lineal
-Los algoritmos de búsqueda lineal, también conocidos como búsqueda secuencial, implican recorrer una lista de elementos uno por uno hasta encontrar un elemento específico. Este algoritmo es muy sencillo de implementar en código pero puede ser muy ineficiente dependiendo del largo de la lista y la ubicación donde está el elemento. A continuación veremos un pequeño ejemplo de código en Python.
+En este trabajo nos vamos a enfocar en las dos formas más primitvas de ambos. La búsqueda lineal y la búsqueda bonaria. Hablo de formas primitivas porque claramente hay formas mas avanzadas de búsqueda y complejas pero estas sientan las bases conceptuales y fundamentos de esas otras formas. 
 
-En este ejemplo de código, necesitamos buscar el número 39, para buscarlo de forma lineal simplemente recorremos la lista con la ayuda de una estructura de bucle for y luego preguntamos si el elemento actual es igual a el elemento que estamos buscando, de ser así retornamos el índice del elemento y terminamos el bucle pero si el bucle termina y no retorno ningún elemento significa que el número que buscamos no se encuentra en la lista por lo que retornamos -1. Este algoritmo puede ser útil para recorrer listas pequeñas o listas desordenadas pero no es eficiente para recorrer listas demasiado largas.
+# Marco Teórico
 
-## Ventajas y Desventajas del Algoritmo de Búsqueda Lineal
-## Ventajas:
-Sencillez: La búsqueda lineal es uno de los algoritmos de búsqueda más simples y fáciles de implementar. Solo requiere iterar a través de la lista de elementos uno por uno hasta encontrar el objetivo.
-flexibilidad: La búsqueda lineal puede aplicarse a cualquier tipo de lista, independientemente de si está ordenada o no.
-## Desventajas:
-Ineficiencia en listas grandes: La principal desventaja de la búsqueda lineal es su ineficiencia en listas grandes. Debido a que compara cada elemento uno por uno, su tiempo de ejecución crece de manera lineal con el tamaño de la lista.
-No es adecuada para listas ordenadas: Aunque puede funcionar en listas no ordenadas, la búsqueda lineal no es eficiente para listas ordenadas. En tales casos, algoritmos de búsqueda más eficientes, como la búsqueda binaria, son preferibles.
+## Busqueda Lineal
+Los algoritmos de búsqueda lineal, también conocidos como búsqueda secuencial, implican recorrer una lista de elementos uno por uno hasta encontrar un elemento específico. Este algoritmo es muy sencillo de implementar en código pero puede ser muy ineficiente dependiendo del largo de la lista y la ubicación donde está el elemento. Es un algoritmo extremadamente sencillo e intuitivo 
 
+Dos ventajas de éste tipo de búsqueda son su snecillez y su flexibilidad. Por un lado la búsqueda lineal es uno de los algoritmos de búsqueda más simples y fáciles de implementar y solo requiere iterar a través de la lista de elementos uno por uno hasta encontrar el objetivo. Tambien puede aplicarse a cualquier tipo de lista, independientemente de si está ordenada o no.
+
+Su deventajas son su ineficiencia a la hora de manejar grandes volumenes de datos y que no es el método óptimo para manejar listas ordenadas.La búsqueda lineal es extremadamente ineficiente en listas grandes ya que compara cada elemento uno por uno lo cual implica que su tiempo de ejecución crezca de manera lineal con el tamaño de la lista. La otra dificultad es que aunque puede funcionar en listas no ordenadas, la búsqueda lineal no es eficiente para listas ordenadas. En tales casos, algoritmos de búsqueda más eficientes, como la búsqueda binaria, son preferibles.
 
 ## Búsqueda Binaria
-El algoritmo de búsqueda binaria es un algoritmo muy eficiente que se aplica solo a listas ordenadas. Funciona dividiendo repetidamente la lista en dos mitades y comparando el elemento objetivo con el elemento del medio, esto reduce significativamente la cantidad de comparaciones necesarias.
+El algoritmo de búsqueda binaria es un algoritmo muy eficiente que se aplica solo a listas ordenadas. Funciona dividiendo repetidamente la lista en dos mitades y comparando el elemento objetivo con el elemento del medio, esto reduce dramaticamente la cantidad de comparaciones necesarias.
 
-A continuación veremos un pequeño ejemplo de búsqueda binaria con Python.
-En este ejemplo, hacemos uso de un algoritmo de búsqueda binario para encontrar el número 27 en una lista de elementos ordenados, para poder encontrar el elemento que buscamos podemos hacer uso de una función recursiva, en esta función el caso base sería si el número de la lista en la posición centro es igual al número que buscamos, de ser así retornamos el valor de la variable centro este sería el índice del número, de lo contrario, dividimos la lista en dos mitades y hacemos el llamado recursivo hasta encontrar el número que buscamos pero si el número no se encuentra en la lista retornamos -1.
+Las dos ventajas principales de éste método son su eficiencia en listas ordenadas y su reducido numero de comparaciones. Su tiempo de ejecución es de O(log n), lo que significa que disminuye rápidamente a medida que el tamaño de la lista aumenta. Comparado con la búsqueda lineal, la búsqueda binaria realiza menos comparaciones en promedio, lo que lo hace más rápido para encontrar el objetivo.
 
-## Ventajas y Desventajas del Algoritmo de Búsqueda Binaria
-## Ventajas:
-Eficiencia de listas ordenadas: La principal ventaja de la búsqueda binaria es su eficiencia en listas ordenadas. Su tiempo de ejecución es de O(log n), lo que significa que disminuye rápidamente a medida que el tamaño de la lista aumenta.
-Menos comparaciones: Comparado con la búsqueda lineal, la búsqueda binaria realiza menos comparaciones en promedio, lo que lo hace más rápido para encontrar el objetivo.
-## Desventajas:
-Requiere una lista ordenada: La búsqueda binaria sólo es aplicable a listas ordenadas, Si la lista no está ordenada, se debe realizar una operación adicional para ordenarla antes de usar la búsqueda binaria.
-Mayor complejidad de implementación: Comparado con la búsqueda lineal, la búsqueda binaria es más compleja de implementar debido a su naturaleza recursiva.
-```
+Sus desventajas son que requiere una lista ordenada y que acarrea una mayor complejidad a la hora de la implementacion. Si la lista no está ordenada, se debe realizar una operación adicional para ordenarla antes de usar éste método. Comparado con la búsqueda lineal, la búsqueda binaria es más compleja de implementar debido a su naturaleza recursiva.
+
+# Caso Practico
+# Metodología Utilizada	
+# Resultados Obtenidos	
+# Conclusión Final	
+# Bibliografía
+[Algoritmos de Ordenamiento y Búsqueda en Python: Optimizando la Gestión de Datos. (2025, April 25). 4Geeks. https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python](https://4geeks.com/es/lesson/algoritmos-de-ordenamiento-y-busqueda-en-python)
+[Krishna, A. (2024, August 14). Search algorithms – linear search and binary search code implementation and complexity analysis. freeCodeCamp.org. https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/](https://www.freecodecamp.org/news/search-algorithms-linear-and-binary-search-explained/)
+[Datacamp Python Link](https://www.datacamp.com/es/tutorial/linear-search-python)
+[TutorialsPoint. (2025, March 25). Searching algorithms. https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm](https://www.tutorialspoint.com/data_structures_algorithms/searching_algorithms.htm)
+[TutorialsPoint. (2025a, March 25). Linear Search Algorithm. https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm)
+[TutorialsPoint. (2025a, March 25). Binary search algorithm. https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
+
+# Anexos
+
+
+
 -------------
 ## Datacamp Python:
-[Datacamp Python Link](https://www.datacamp.com/es/tutorial/linear-search-python)
+
 ```
-La búsqueda lineal es un algoritmo que localiza un valor concreto dentro de una lista comprobando cada elemento uno a uno. Empieza por el primer elemento, lo compara con el objetivo y sigue moviéndose por la lista hasta que encuentra el objetivo o llega al final de la lista. Es un algoritmo sencillo e intuitivo.
 
 La búsqueda lineal no necesita que los datos estén ordenados para funcionar, por lo que se utiliza principalmente en conjuntos de datos sin ordenar. Esto lo hace útil en situaciones en las que no es práctico ordenar, o cuando trabajas con datos en bruto. Sin embargo, esta ventaja tiene un coste: no es tan eficaz como otros algoritmos que requieren datos preclasificados.
 
