@@ -1,8 +1,11 @@
-# Integrador Programación I
+# Integrador Programación I: Algoritmos de busqueda y ordenamiento
 
 Repositorio público para el trabajo integrador de Programación I.
 
-Integrante: Prados Gonzalo
+Integrante: Prados Gonzalo, comisión 19
+Materia: Programación I
+Docente: Nicolás Quirós
+Fecha de entrega: 09/06/2025
 
 # Introducción
 
@@ -159,3 +162,8 @@ TutorialsPoint. (2025, March 25). Searching algorithms. [https://www.tutorialspo
 TutorialsPoint. (2025a, March 25). Linear Search Algorithm. [https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm)
 
 TutorialsPoint. (2025a, March 25). Binary search algorithm. [https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm)
+
+# Anexo
+
+[Presentacion de Youtube](https://youtu.be/gW9TYg5ZguY)
+

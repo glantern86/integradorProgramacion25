@@ -19,7 +19,7 @@ def busquedaBinaria(lista, objetivo, inicio, fin):
         return busquedaBinaria(lista, objetivo, inicio, centro - 1)
 
 lista = list(range(1, 100001))
-numero_objetivo = 100000
+numero_objetivo = 50000
 
 
 inicio_binaria = time.perf_counter()
