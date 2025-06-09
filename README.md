@@ -32,56 +32,35 @@ Su desventaja principal es que requiere una lista ordenada y en segundo lugar qu
 
 # Caso Práctico
 
-## ESCENARIO 1
+## ESCENARIO 1: 
 
-Para este caso de estudio vamos a hacer la comparativa entre ambos algoritmos utilizando una lista desordenada. Puesto que la búsqueda binaria no funciona con listas desordenadas, vamos a tener que aplicar el método `.sort()` y pagar el tiempo de cómputo correspondiente. También estoy utilizando el módulo `time` para poder medir cuánto tiempo tarda cada llamada.
+Para este caso de estudio vamos a hacer la comparativa entre ambos algoritmos utilizando una lista ordenada con cien mil elementos. También estoy utilizando el módulo `time` para poder medir cuánto tiempo tarda cada llamada.
 
 **Búsqueda Lineal**
 
-Acá presentamos un algoritmo de búsqueda lineal extremadamente simple en Python (también disponible en el repositorio bajo el nombre `busquedaLineal.py`).  
-Nuestro código se limita a buscar un número en una lista y nos devuelve la posición en la que se encuentra el número. Ya sea que se encuentre o no el número deseado, nos devuelve un mensaje con el resultado de la búsqueda. Comencé por definir la función principal, el código lo que hace es ir elemento por elemento de la lista hasta que encuentra el que estamos buscando. Para este primer escenario vamos a buscar el número 26, que se encuentra en la posición 37 de una lista que contiene 50 elementos.
+Acá presentamos un algoritmo de búsqueda lineal extremadamente simple en Python (también disponible en el repositorio bajo el nombre `algoritmosBusqueda.py`).  
+Nuestro código se limita a buscar un número en una lista y nos devuelve la posición en la que se encuentra el número. Ya sea que se encuentre o no el número deseado, nos devuelve un mensaje con el resultado de la búsqueda. Comencé por definir la función principal, el código lo que hace es ir elemento por elemento de la lista hasta que encuentra el que estamos buscando. Para este primer escenario vamos a buscar el número 4900, que se encuentra en una lista con cien mil elementos.
 
 ```python
-import time
-
 def busquedaLineal(lista, obj):
     for i in range(len(lista)):
         if lista[i] == obj:
             return i
     return -1
-
-lista = [13, 2, 39, 1, 5, 15, 27, 6, 50, 3, 7, 20, 10, 34, 9, 11, 45, 18, 22, 8, 25, 14, 30, 4, 12, 17, 28, 33, 16, 21, 36, 19, 24, 29, 35, 40, 23, 26, 31, 37, 41, 42, 32, 38, 43, 44, 46, 47, 48, 49]
-buscar = 13
-
-inicio = time.perf_counter()
-resultado = busquedaLineal(lista, buscar)
-fin = time.perf_counter()
-
-tiempo_ms = (fin - inicio) * 1000
-
-if resultado != -1:
-    print(f"El número {buscar} se encuentra en la posición: {resultado}")
-else:
-    print(f"El número {buscar} no se encuentra en la lista.")
-
-print(f"Tiempo de ejecución: {tiempo_ms:.5f} ms")
 ```
 
 Resultado Búsqueda Lineal:
 
 ```
-El número 26 se encuentra en la posición: 37
-Tiempo de ejecución: 0.01136 ms
+[Búsqueda Lineal ] El número 4900 se encuentra en la posición real: 4900, Tiempo: 0.61962 ms
 ```
 
 **Búsqueda Binaria**
 
-Este es nuestro algoritmo de búsqueda binaria (también disponible en el repositorio bajo el nombre `busquedaBinaria.py`).  
+Este es nuestro algoritmo de búsqueda binaria (también disponible en el repositorio bajo el nombre `algoritmosBusqueda.py`).  
 En este código implementamos la búsqueda binaria de forma recursiva. Primero ordenamos la lista luego vamos dividiendo el rango de búsqueda a la mitad comparando el valor del medio con el número buscado. Esto permite encontrar el elemento rápidamente en listas ordenadas, con un menor número de comparaciones que la búsqueda lineal.
 
 ```python
-import time
-
 def busquedaBinaria(lista, objetivo, inicio, fin):
     if inicio > fin:
         return -1
@@ -93,65 +72,75 @@ def busquedaBinaria(lista, objetivo, inicio, fin):
         return busquedaBinaria(lista, objetivo, centro + 1, fin)
     else:
         return busquedaBinaria(lista, objetivo, inicio, centro - 1)
-
-lista = [13, 2, 39, 1, 5, 15, 27, 6, 50, 3, 7, 20, 10, 34, 9, 11, 45, 18, 22, 8, 25, 14, 30, 4, 12, 17, 28, 33, 16, 21, 36, 19, 24, 29, 35, 40, 23, 26, 31, 37, 41, 42, 32, 38, 43, 44, 46, 47, 48, 49]
-lista.sort()
-numero_objetivo = 13
-inicio_busqueda = 0
-fin_busqueda = len(lista) - 1
-
-inicio = time.perf_counter()
-resultado = busquedaBinaria(lista, numero_objetivo, inicio_busqueda, fin_busqueda)
-fin = time.perf_counter()
-
-tiempo_ms = (fin - inicio) * 1000
-
-if resultado != -1:
-    print(f"El número {numero_objetivo} se encuentra en la posición {resultado}.")
-else:
-    print(f"El número {numero_objetivo} NO se encuentra en la lista.")
-
-print(f"Tiempo de ejecución: {tiempo_ms:.5f} ms")
 ```
 
 Resultado Búsqueda Binaria:
 
 ```
-El número 26 se encuentra en la posición 25.
-Tiempo de ejecución: 0.00659 ms
+[Búsqueda Binaria] El número 4900 se encuentra en la posición real: 4900, Tiempo: 0.02377 ms
 ```
 
-## ESCENARIO 2
+## ESCENARIO 2:
 
-El segundo escenario voy a plantearlo con el número 13, el cual se encuentra en la posición 0, y por una cuestión de simpleza, solamente voy a copiar los resultados.
+El segundo escenario voy a plantearlo con el número 13, el cual se encuentra casi al comienzo de la lista y por una cuestión de simpleza, solamente voy a copiar los resultados.
 
 Resultado Búsqueda Lineal:
 
 ```
-El número 13 se encuentra en la posición: 0
-Tiempo de ejecución: 0.00633 ms
+[Búsqueda Lineal ] El número 13 se encuentra en la posición real: 13, Tiempo: 0.00678 ms
 ```
 
 Resultado Búsqueda Binaria:
 
 ```
-El número 13 se encuentra en la posición 12.
-Tiempo de ejecución: 0.01236 ms
+[Búsqueda Binaria] El número 13 se encuentra en la posición real: 13, Tiempo: 0.02514 ms
+
 ```
+
+## ESCENARIO 3:
+
+El tercer escenario voy a plantearlo con el número 100000, el cual se encuentra al final de la lista.
+
+Resultado Búsqueda Lineal:
+
+```
+[Búsqueda Lineal ] El número 100000 se encuentra en la posición real: 100000, Tiempo: 14.45768 ms
+```
+
+Resultado Búsqueda Binaria:
+
+```
+[Búsqueda Binaria] El número 100000 se encuentra en la posición real: 100000, Tiempo: 0.06502 ms
+
+```
+
 
 # Metodología Utilizada
 
 La metodología incluye una investigación exhaustiva en diversas fuentes, presentes en la seccion de Bibliografía. Luego procedí a generar algoritmos de prueba para verificar de forma empírica los tiempos de cómputo y compararlos.  
-Como herramienta de trabajo estoy utilizando Visual Studio Code como IDE, GitHub Copilot para ayudarme a corregir mi código y GitHub como plataforma en la que voy a publicar mi trabajo.  
+Como herramienta de trabajo estoy utilizando Visual Studio Code como IDE, GitHub Copilot para ayudarme a corregir mi código y GitHub como plataforma en la que voy a publicar mi trabajo. Gamma me asistió a la hora de crear la presentación.
 Incluyo el módulo `time` para poder medir los tiempos de ejecución y el método `sort` para ordernar mi lista.
 
 # Resultados Obtenidos
 
-A primera vista salta el hecho de la longitud del código. Mientras que nuestro algoritmo de búsqueda lineal tiene 23 líneas, el de búsqueda binaria tiene 32, casi un 40% más de código. Respecto de que la búsqueda lineal es más simple, no hay duda alguna.
+A primera vista salta el hecho de la longitud del código. Mientras que nuestro algoritmo de búsqueda lineal tiene 5 líneas, el de búsqueda binaria tiene 11 más del doble de código. Respecto de que la búsqueda lineal es más simple, no hay duda alguna.
 
-Respecto al tiempo de cómputo, estamos analizando primero un escenario que es beneficioso para la búsqueda binaria. Tomamos una serie de 50 elementos y el elemento que buscamos está por más de la mitad (en la posición 37 de 50). Mientras que la búsqueda lineal demora 0.01136 ms, la binaria demora 0.00659 ms casi la mitad del tiempo.
+Los resultados obtenidos en los distintos escenarios muestran cómo se comportan ambos algoritmos en la práctica, según la posición del número que se desea encontrar:
 
-En el segundo escenario analizamos un caso que es extremadamente provechoso para la búsqueda lineal. El elemento a buscar es el primero de la serie. Mientras que la búsqueda lineal demora 0.00633 ms, la binaria está tardando 0.01236 ms.
+    En el escenario 1, donde el número 4900 está en una posición avanzada de la lista (posición 4900 de 100000), la búsqueda binaria fue mucho más rápida que la búsqueda lineal.
+        Búsqueda Lineal: 0.61962 ms
+        Búsqueda Binaria: 0.02377 ms
+    Esto demuestra la ventaja de la búsqueda binaria cuando trabajamos con listas ordenadas muy grandes
+
+    En el escenario 2, el número 13 está casi al principio de la lista. En este caso, la búsqueda lineal fue más eficiente porque encontró el número en los primeros pasos, mientras que la búsqueda binaria necesitó hacer varias divisiones antes de llegar a él.
+        Búsqueda Lineal: 0.00678 ms
+        Búsqueda Binaria: 0.02514 ms
+    Este resultado confirma que, cuando el dato buscado está al principio la búsqueda lineal puede ser más rápida.
+
+    En el escenario 3, el número 100000 está al final de la lista. Aquí se observa claramente la gran desventaja de la búsqueda lineal, que tuvo que recorrer casi toda la lista hasta encontrar el número, mientras que la búsqueda binaria lo localizó rápidamente.
+        Búsqueda Lineal: 14.45768 ms
+        Búsqueda Binaria: 0.06502 ms
+    En este caso, la diferencia de rendimiento es drástica, con la búsqueda binaria siendo más de 200 veces más rápida.
 
 
 # Conclusión Final
